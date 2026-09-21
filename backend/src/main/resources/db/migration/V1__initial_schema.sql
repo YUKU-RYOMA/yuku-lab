@@ -1,0 +1,1 @@
+-- Initial schema is intentionally empty. Feature migrations will be added per module.

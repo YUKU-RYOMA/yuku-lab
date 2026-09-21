@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: yuku-lab-backend
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/yuku_lab}
+    username: ${DATABASE_USERNAME:yuku_lab}
+    password: ${DATABASE_PASSWORD:yuku_lab}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
